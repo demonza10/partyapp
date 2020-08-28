@@ -23,7 +23,7 @@ class Profile extends StatelessWidget {
       body: ListView(children: <Widget>[
         ImageProfile(),
         NameUser(),
-        QrCode(),
+        Container(child: QrCode()),
         ButtonEdit(),
       ]),
     );

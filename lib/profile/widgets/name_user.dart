@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class NameUser extends StatelessWidget {
-  Widget nameField() {
+  Widget prefix() {
     return TextFormField(
       decoration: InputDecoration(
         labelText: 'คำนำหน้า',
@@ -13,7 +13,13 @@ class NameUser extends StatelessWidget {
 
   Widget name() {
     return TextFormField(
-      decoration: InputDecoration(labelText: 'คำนำหน้า', hintText: 'นาย'),
+      decoration: InputDecoration(labelText: 'ชื่อจริง', hintText: 'ชื่อจริง'),
+    );
+  }
+
+  Widget lastname() {
+    return TextFormField(
+      decoration: InputDecoration(labelText: 'นามสกุล', hintText: 'นามสกุล'),
     );
   }
 
@@ -62,11 +68,29 @@ class NameUser extends StatelessWidget {
     );
   }
 
-  Widget birthdar() {
+  Widget day() {
     return TextFormField(
       decoration: InputDecoration(
-        labelText: 'วันเดือนปีเกิด',
-        hintText: '-----',
+        labelText: 'วัน',
+        hintText: '01',
+      ),
+    );
+  }
+
+  Widget month() {
+    return TextFormField(
+      decoration: InputDecoration(
+        labelText: 'เดือน',
+        hintText: '01',
+      ),
+    );
+  }
+
+  Widget year() {
+    return TextFormField(
+      decoration: InputDecoration(
+        labelText: 'ปี',
+        hintText: '2563',
       ),
     );
   }
@@ -96,16 +120,44 @@ class NameUser extends StatelessWidget {
       child: Form(
         child: Column(
           children: <Widget>[
-            nameField(),
-            name(),
-            standing(),
-            standingparty(),
-            cardnumber(),
-            phonenumber(),
-            email(),
-            birthdar(),
-            membernumber(),
-            status(),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Container(
+                  margin: EdgeInsets.all(5.0),
+                  width: 100.0,
+                  child: prefix(),
+                ),
+                Container(
+                  margin: EdgeInsets.all(5.0),
+                  width: 100.0,
+                  child: name(),
+                ),
+                Container(
+                  margin: EdgeInsets.all(5.0),
+                  width: 100.0,
+                  child: lastname(),
+                ),
+              ],
+            ),
+            Container(margin: EdgeInsets.all(10.0), child: standing()),
+            Container(margin: EdgeInsets.all(10.0), child: standingparty()),
+            Container(margin: EdgeInsets.all(10.0), child: cardnumber()),
+            Container(margin: EdgeInsets.all(10.0), child: phonenumber()),
+            Container(margin: EdgeInsets.all(10.0), child: email()),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Container(
+                    margin: EdgeInsets.all(5.0), width: 100.0, child: day()),
+                Container(
+                    margin: EdgeInsets.all(5.0), width: 100.0, child: month()),
+                Container(
+                    margin: EdgeInsets.all(5.0), width: 100.0, child: year()),
+              ],
+            ),
+            Container(margin: EdgeInsets.all(10.0), child: membernumber()),
+            Container(margin: EdgeInsets.all(10.0), child: status()),
           ],
         ),
       ),

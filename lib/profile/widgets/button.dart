@@ -6,14 +6,15 @@ class ButtonEdit extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Container(
+          margin: EdgeInsets.only(top: 5.0, bottom: 10.0),
           child: RaisedButton(
-        onPressed: () => {},
-        color: Colors.orange,
-        child: Text(
-          'ยืนยันการแก้ไช',
-          style: TextStyle(color: Colors.white),
-        ),
-      )),
+            onPressed: () => {},
+            color: Colors.orange,
+            child: Text(
+              'ยืนยันการแก้ไช',
+              style: TextStyle(color: Colors.white),
+            ),
+          )),
     );
   }
 }
