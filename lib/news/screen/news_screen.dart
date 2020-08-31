@@ -16,6 +16,14 @@ class _SlideNewsPageState extends State<SlideNewsPage> {
         children: <Widget>[
           SlideNews(),
           Container(
+            margin: EdgeInsets.only(left: 10.0),
+            alignment: Alignment.bottomLeft,
+            child: Text(
+              "ข่าวสาร",
+              style: TextStyle(fontSize: 50.0, color: Colors.orange),
+            ),
+          ),
+          Container(
             height: 500,
             // color: Colors.grey,
             child: ListNews(),
