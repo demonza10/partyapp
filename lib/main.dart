@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:profileapp/profile/screen/proflie_screen.dart';
+import 'package:profileapp/news/screen/news_screen.dart';
+import 'package:profileapp/news/widgets/main_news.dart';
 
 void main() {
   runApp(MyApp());
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: Colors.red,
       ),
-      home: Profile(),
+      home: SlideNewsPage(),
     );
   }
 }
